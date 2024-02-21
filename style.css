@@ -1,0 +1,185 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  color: #000;
+  overflow: hidden;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  transition: all 0.2s ease-out;
+}
+
+html {
+  overflow-y: auto;
+  scroll-behavior: smooth;
+}
+
+.theme {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 32px;
+  height: 32px;
+  padding: 7px;
+  background-color: #222;
+  border-radius: 0 0 0.5rem 0;
+}
+.theme .theme_toggle {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  pointer-events: none;
+  cursor: pointer;
+  width: 32px;
+  aspect-ratio: 1/1;
+  padding: 7px;
+}
+.theme .theme_toggle svg {
+  width: 32px;
+  fill: #fff;
+}
+.theme .theme_toggle.light svg {
+  fill: #000;
+}
+.theme .theme_toggle.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.twitter {
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-inline: 1em;
+  background-color: #222;
+  border-radius: 0 0 0 0.5rem;
+  gap: 10px;
+}
+.twitter svg {
+  width: 32px;
+  height: 32px;
+  fill: #1da1f2;
+}
+.twitter p {
+  color: #fff;
+  font-size: 1rem;
+  font-family: sans-serif;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  gap: 2%;
+}
+.links a {
+  position: relative;
+  display: grid;
+  place-items: center;
+  place-content: center;
+  width: 130px;
+  aspect-ratio: 1/1;
+  border-radius: 0.5rem;
+  background-color: #EEE;
+  border: 1px solid #aaa;
+  box-shadow: 0 0 20px -10px #666;
+  z-index: 1;
+}
+.links a svg {
+  width: 60px;
+  fill: #000;
+}
+.links a p {
+  position: absolute;
+  bottom: 7px;
+  font-family: sans-serif;
+}
+.links a::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: #ddd;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  translate: -101% -101%;
+  border-radius: 0.5rem;
+  transition: all 0.2s ease-out;
+}
+.links a:hover::before {
+  translate: 0 0;
+}
+
+footer {
+  position: absolute;
+  left: 50%;
+  translate: -50%;
+  bottom: 0;
+}
+footer p.copyright {
+  font-size: 1rem;
+  color: #000;
+}
+
+body {
+  --width: calc(100vw);
+  height: 100vh;
+  width: var(--width);
+  background-color: #fff;
+}
+body::-webkit-scrollbar {
+  width: 10px;
+}
+body::-webkit-scrollbar-track {
+  background-color: #bbb;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: #444;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  background-clip: padding-box;
+}
+body::-webkit-scrollbar-thumb:hover {
+  background-color: #222;
+}
+body.dark {
+  background-color: #222;
+}
+body.dark .theme {
+  background-color: #ddd;
+}
+body.dark .twitter {
+  background-color: #ddd;
+}
+body.dark .twitter svg {
+  fill: #1d9bf0;
+}
+body.dark .twitter p {
+  color: #000;
+}
+body.dark .links a {
+  background-color: #333;
+  border: 1px solid #777;
+  box-shadow: 0 0 20px -10px #aaa;
+}
+body.dark .links a svg {
+  fill: #fff;
+}
+body.dark .links a p {
+  color: #fff;
+}
+body.dark .links a::before {
+  background-color: #444;
+}
+body.dark footer p.copyright {
+  color: #fff;
+}/*# sourceMappingURL=style.css.map */

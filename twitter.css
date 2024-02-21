@@ -1,0 +1,7 @@
+.twitter svg {
+  fill: #fff;
+}
+
+body.dark .twitter svg {
+  fill: #000;
+}/*# sourceMappingURL=twitter.css.map */
